@@ -9,7 +9,7 @@ public class Avion extends Vehicule{
     @Override
     public void afficher() {
         super.afficher();
-        System.out.println("Heures de vol: " + heuresVol);
+        System.out.println("Heures de vol: " + heuresVol+" heures.");
     }
     @Override
     public double calculPrix(){

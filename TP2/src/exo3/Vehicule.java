@@ -14,7 +14,7 @@ public class Vehicule {
     public void afficher() {
         System.out.println("Marque: " + marque);
         System.out.println("Date d'achat: " + dateAchat);
-        System.out.println("Prix d'achat: " + prixAchat);
+        System.out.println("Prix d'achat: " + prixAchat+" DA.");
     }
     public double calculPrix(){
         int anciennete = 2023 - dateAchat;
@@ -26,14 +26,10 @@ public class Vehicule {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Vehicule vehicule)) return false;
+    public boolean equals(Object x) {
+        if (this == x) return true;
+        if (!(x instanceof Vehicule vehicule)) return false;
         return dateAchat == vehicule.dateAchat && Double.compare(prixAchat, vehicule.prixAchat) == 0 && Objects.equals(marque, vehicule.marque);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(marque, dateAchat, prixAchat);
-    }
 }

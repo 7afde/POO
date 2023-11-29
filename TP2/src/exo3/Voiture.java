@@ -14,16 +14,14 @@ public class Voiture extends Vehicule{
     public void afficher() {
         super.afficher();
         System.out.println("Nombre de portes: " + NbrPortes);
-        System.out.println("Puissance: " + Puissance);
-        System.out.println("Kilométrage: " + Kilometrage);
+        System.out.println("Puissance: " + Puissance+" HP.");
+        System.out.println("Kilométrage: " + Kilometrage +" Km.");
     }
     @Override
     public double calculPrix(){
-        int anciennete = 2023 - dateAchat;
+        super.calculPrix();
         double prixReduit = prixAchat;
-        for (int i = 0; i < anciennete; i++) {
-            prixReduit *= 0.95;
-        }
+
         double reductionKilometrage = (Kilometrage / 100000) * 0.10;
         prixReduit *= (1 - reductionKilometrage);
         return prixReduit;

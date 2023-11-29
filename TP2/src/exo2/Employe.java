@@ -19,10 +19,6 @@ public class Employe {
     public String toString() {
         return "" +
                 "nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", annee=" + annee +
-                ", NbrHeures=" + NbrHeures +
-                ", NbrHeuresSupp=" + NbrHeuresSupp +
-                '}';
+                ", prenom='" + prenom + '\'' + '.';
     }
 }
