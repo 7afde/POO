@@ -11,4 +11,26 @@ public abstract class Animal {
     }
     public abstract void Diagnostique(double poids);
     public abstract void Diagnostique(int age);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "nom='" + nom + '\'' +
+                ", vegetarien=" + vegetarien +
+                '}';
+    }
 }

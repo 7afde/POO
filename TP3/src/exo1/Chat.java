@@ -1,8 +1,10 @@
 package exo1;
-
-public class Chat extends Animal{
-    public Chat(String nom, boolean vegetarien) {
+import java.util.*;
+public class Chat extends Animal implements Pet, MakeSound{
+    private String couleur;
+    public Chat(String nom, boolean vegetarien, String couleur){
         super(nom, vegetarien);
+        this.couleur = couleur;
     }
 
     @Override
@@ -19,5 +21,30 @@ public class Chat extends Animal{
         if ( age > 10) {
             System.out.println("Le chat est vieux.");
         }
+    }
+
+    @Override
+    public void CanBePet() {
+        System.out.println("The cat can be pet");
+    }
+
+    @Override
+    public int LifeSpan() {
+        int ageMoyNature = 10;
+        double per = Math.random() * 0.4;
+        return (int) (ageMoyNature + (ageMoyNature * per));
+
+    }
+
+    @Override
+    public void Cri() {
+        System.out.println("miawww");
+    }
+
+    @Override
+    public String toString() {
+        return "Chat{" +
+                "couleur='" + couleur + '\'' +
+                "} " + super.toString();
     }
 }
